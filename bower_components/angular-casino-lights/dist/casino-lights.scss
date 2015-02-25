@@ -1,0 +1,43 @@
+$casino-header-font-size:110px !default;
+$casino-light-size:$casino-header-font-size * 0.08 !default;
+$casino-line-height:$casino-header-font-size * 0.7 !default;
+$casino-font-family:'Raleway' !default;
+
+h1 {
+  font-family:$casino-font-family;
+  font-size:$casino-header-font-size;
+  font-weight:bold;
+
+  span {
+
+    position:relative;
+    display:inline-block;
+    line-height:$casino-line-height;
+    height:$casino-height;
+
+    .light {
+      transform: translate(-50%, 50%);
+      -webkit-transform: translate(-50%, 50%);
+      position:absolute;
+      background-color:rgba(140, 140, 140, 0.50);
+      height:$casino-light-size;//round($casino-light-size);
+      width:$casino-light-size;//round($casino-light-size);
+      border-radius: $casino-light-size/ 2;
+      border:solid 1px #ECDBB9;
+    }
+
+    .light.on {
+      background-color:#FCF8D2;
+      box-shadow:
+        3px 0px 10px 3px rgba(255, 235, 194, 0.18),
+        -3px 0px 10px 3px rgba(255, 235, 194, 0.18),
+        0px 3px 10px 3px rgba(255, 235, 194, 0.18),
+        0px -3px 10px 3px rgba(255, 235, 194, 0.18),
+
+        6px 0px 10px 6px rgba(255, 235, 194, 0.1),
+        -6px 0px 10px 6px rgba(255, 235, 194, 0.1),
+        0px 6px 10px 6px rgba(255, 235, 194, 0.1),
+        0px -6px 10px 6px rgba(255, 235, 194, 0.1);
+    }
+  }
+}

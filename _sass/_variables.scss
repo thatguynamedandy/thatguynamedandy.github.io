@@ -2,26 +2,26 @@
 //
 // VARIABLES
 //
+$h1-font-size: rem-calc(160);
 
 // Colors
-$blue: #4183C4;
-
-// Grays
-$black: #000;
-$darkerGray: #222;
 $darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
 
-// Mobile breakpoints
-@mixin mobile {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
-}
+$header-font-color:#dec085;
+$body-bg: $darkGray;
+$form-label-font-color:#9A9999;
+$body-font-family: 'Source Sans Pro', sans-serif;;
+$header-font-family: 'Bitter', serif;
+//Casino light variables
+
+$casino-font-family:$header-font-family;
+$casino-header-font-size:$h1-font-size;
+$casino-light-size:10px;
+$casino-line-height:6.3rem;
+$casino-height:7.5rem;
+//$casino-light-size
+$text-border:#d78965;
+$text-shadow-1:darken($text-border, 30%);
+$text-shadow-2:darken($text-border, 40%);
