@@ -9,37 +9,59 @@ layout: default
   </div>
 
   <div class="large-12 columns">
-    <form class="row">
-      <div class="medium-offset-3 medium-1 columns">
-        <label for="power">Power</label>
-        <div class="switch radius tiny">
-          <input ng-model="config.power" id="power" type="checkbox">
-          <label for="power"></label>
-        </div>
+    <div class="row">
+      <div class="medium-offset-1 large-offset-3 large-6 medium-10 end columns">
+        <a ng-click="showSettings = !showSettings">
+          <small>
+            Settings
+            <span ng-hide="showSettings">&#9650;</span>
+            <span ng-show="showSettings">&#9660;</span>
+          </small>
+        </a>
       </div>
-      <div class="medium-5 columns end">
-        <label>Select Box
-          <select ng-model="config.filter">
-            <option value="random">Random</option>
-            <option value="vertical">Vertical</option>
-            <option value="letter">Letter</option>
-          </select>
-        </label>
-      </div>
-      <!--[if !IE]> -->
-        <div class="medium-offset-3 medium-6 end columns">
-          <label for="speed">Interval</label>
-          <input id="speed" min="30" max="200" type="range" ng-model="config.speed" />
+    </div>
+    <form class="row" ng-show="showSettings">
+      <div class="medium-offset-1 large-offset-3 large-6 medium-10 end columns panel">
+        <div class="row collapse">
+          <div class="medium-2 columns">
+            <label for="power">Power</label>
+            <div class="switch radius tiny">
+              <input ng-model="config.power" id="power" type="checkbox">
+              <label for="power"></label>
+            </div>
+          </div>
+          <div class="medium-10 columns end">
+            <label>Select Box
+              <select ng-model="config.filter">
+                <option value="random">Random</option>
+                <option value="vertical">Vertical</option>
+                <option value="letter">Letter</option>
+              </select>
+            </label>
+          </div>
+          <!--[if !IE]> -->
+            <div class="columns">
+              <label for="speed">Interval</label>
+              <input id="speed" min="30" max="200" type="range" ng-model="config.speed" />
+            </div>
+          <!-- <![endif]-->
+          <div class="columns">
+            <label>
+              <a target="github" href="http://github.com/thatguynamedandy/angular-casino-lights">
+                Go get yourself some flashy lights!
+              </a>
+            </label>
+          </div>
         </div>
-      <!-- <![endif]-->
-      <div class="medium-offset-3 medium-6 end columns">
-        <br />
-        <label>
-          <a target="github" href="http://github.com/thatguynamedandy/angular-casino-lights">
-            Go get yourself some flashy lights!
-          </a>
-        </label>
       </div>
     </form>
   </div>
-</div>
+
+  <div class="medium-offset-1 large-offset-3 large-6 medium-10 end columns">
+    <h2 class="subheader text-center">
+      I am a Developer, based in Brighton, England. I specalise in making things
+      happen in your browser.
+    </h2>
+  </div>
+
+</article>

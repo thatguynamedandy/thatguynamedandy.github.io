@@ -12,11 +12,21 @@
 
 $outline: #d78965;
 
+//Foundation additionals
+.panel {
+  box-shadow:darken($darkGray, 5%) 1px 1px 2px;
+}
+
 [type="range"] {
   width:100%;
 }
+//End Foundation additionals
 
+//Casino Light additionals
 h1 {
+
+  margin-bottom:-30px;
+
   span {
     margin-right:rem-calc(4);
   }
@@ -63,8 +73,4 @@ h1 {
     7px 8px 5px black;
   }
 }
-
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-//@import "highlights";
-//@import "svg-icons";
+//End Casino Light additionals

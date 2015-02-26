@@ -7,4 +7,5 @@ angular.module('casino-demo', [
     filter: 'random',
     power: true
   };
+  $scope.showSettings = false;
 });

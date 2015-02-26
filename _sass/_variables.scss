@@ -10,12 +10,19 @@ $darkGray: #333;
 // Font stacks
 
 $header-font-color:#dec085;
+$subheader-font-color:#C4C3C3;
 $body-bg: $darkGray;
 $form-label-font-color:#9A9999;
 $body-font-family: 'Source Sans Pro', sans-serif;;
 $header-font-family: 'Bitter', serif;
-//Casino light variables
+$small-font-size:rem-calc(14);
 
+
+$panel-bg: scale-color($darkGray, $lightness: 5%);
+$panel-function-factor:8%;
+//$panel-border-color: lighten($panel-bg, 40%);
+
+//Casino light variables
 $casino-font-family:$header-font-family;
 $casino-header-font-size:$h1-font-size;
 $casino-light-size:10px;
