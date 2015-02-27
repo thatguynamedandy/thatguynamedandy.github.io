@@ -4,22 +4,27 @@ layout: default
 <article ng-controller="Home">
   <div class="large-12 columns">
     <header class="text-center">
-      <h1 data-casino-lights config="config">ANDY</h1>
+      <div class="header-wrapper">
+        <h1 data-casino-lights config="config">ANDY</h1>
+        <a ng-click="showSettings = !showSettings">
+          <!--img class="gear-icon" src="/images/settings.svg" /-->
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px"
+             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+              <path class="gear" d="M416.247,275.324v-38.649l-36.572-11.494c-3.107-12.406-8.03-24.09-14.476-34.756l17.779-34.071
+                l-27.332-27.33l-34.171,17.828c-10.621-6.372-22.247-11.236-34.588-14.309l-11.562-36.789h-38.652l-11.562,36.789
+                c-12.338,3.072-23.965,7.937-34.586,14.309l-34.172-17.828l-27.331,27.332l17.778,34.069
+                c-6.444,10.666-11.367,22.35-14.472,34.756l-36.575,11.494v38.649l36.431,11.451c3.078,12.524,7.997,24.32,14.468,35.084
+                l-17.63,33.784l27.332,27.331l33.688-17.575c10.803,6.546,22.659,11.523,35.251,14.636l11.379,36.211h38.652l11.38-36.211
+                c12.593-3.112,24.448-8.09,35.254-14.636l33.688,17.575l27.332-27.331l-17.628-33.784c6.47-10.764,11.389-22.56,14.466-35.084
+                L416.247,275.324z M256.001,340.82c-46.697,0-84.552-37.855-84.552-84.553c0-46.695,37.855-84.551,84.552-84.551
+                c46.694,0,84.549,37.855,84.549,84.551C340.55,302.965,302.695,340.82,256.001,340.82z"/>
+          </svg>
+        </a>
+      </div>
     </header>
   </div>
 
   <div class="large-12 columns">
-    <div class="row">
-      <div class="medium-offset-1 large-offset-3 large-6 medium-10 end columns">
-        <a ng-click="showSettings = !showSettings">
-          <small>
-            Settings
-            <span ng-hide="showSettings">&#9650;</span>
-            <span ng-show="showSettings">&#9660;</span>
-          </small>
-        </a>
-      </div>
-    </div>
     <form class="row" ng-show="showSettings">
       <div class="medium-offset-1 large-offset-3 large-6 medium-10 end columns panel">
         <div class="row collapse">
@@ -31,7 +36,7 @@ layout: default
             </div>
           </div>
           <div class="medium-10 columns end">
-            <label>Select Box
+            <label>Filter
               <select ng-model="config.filter">
                 <option value="random">Random</option>
                 <option value="vertical">Vertical</option>
